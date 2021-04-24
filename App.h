@@ -8,7 +8,7 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #include<string>
 #include<algorithm>
 #include<fstream>
-#include "stdio.h"
+
 
 class App
 {

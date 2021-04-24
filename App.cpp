@@ -78,22 +78,15 @@ void App::create_controls()
 	using std::runtime_error;
 	using namespace std::string_literals;
 
-
-	if (!(this->back = CreateWindowEx(0, L"Button", L"BACK",
-		WS_CHILD | WS_VISIBLE,
-		this->AppWeigh - 450, this->AppHeigth - 100, 70, 40,
-		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::BACK), nullptr, nullptr)))
-		throw runtime_error("Error, can't create button");
-
 	if (!(this->send = CreateWindowEx(0, L"Button", L"SEND",
 		WS_CHILD | WS_VISIBLE,
-		this->AppWeigh - 300, this->AppHeigth - 100, 70, 40,
+		this->AppWeigh - 150, this->AppHeigth - 100, 70, 40,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::SEND), nullptr, nullptr)))
 		throw runtime_error("Error, can't create button");
 
 	if (!(this->cancel = CreateWindowEx(0, L"Button", L"CANCEL",
 		WS_CHILD | WS_VISIBLE,
-		this->AppWeigh - 150, this->AppHeigth - 100, 70, 40,
+		this->AppWeigh - 450, this->AppHeigth - 100, 70, 40,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::CANCEL), nullptr, nullptr)))
 		throw runtime_error("Error, can't create button");
 
@@ -115,11 +108,11 @@ void App::create_controls()
 	SendMessage(cbLadder, CB_ADDSTRING, 0, (LPARAM)L"No");
 	SendMessage(cbLadder, CB_SETCURSEL, 1, 0);
 
-	if (!(this->editLadder = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editLadder = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 700, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LADDER), nullptr, nullptr)))
-		throw runtime_error("Error, can't create x1 edit button");
+		throw runtime_error("Error, can't create x1 edit button");*/
 
 	//*****
 
@@ -138,11 +131,11 @@ void App::create_controls()
 	SendMessage(cbBus, CB_ADDSTRING, 0, (LPARAM)L"No");
 	SendMessage(cbBus, CB_SETCURSEL, 1, 0);
 
-	if (!(this->editBus = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editBus = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 670, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_BUS), nullptr, nullptr)))
-		throw runtime_error("Error, can't create x1 edit button");
+		throw runtime_error("Error, can't create x1 edit button");*/
 
 	/**/
 
@@ -162,11 +155,11 @@ void App::create_controls()
 	SendMessage(cbLaunch, CB_SETCURSEL, 1, 0);
 
 
-	if (!(this->editLaunch = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editLaunch = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 640, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LAUNCH), nullptr, nullptr)))
-		throw runtime_error("Error, can't create x1 edit button");
+		throw runtime_error("Error, can't create x1 edit button");*/
 
 
 	//***
@@ -180,11 +173,11 @@ void App::create_controls()
 	SendMessage(cbWater, CB_ADDSTRING, 0, (LPARAM)L"No");
 	SendMessage(cbWater, CB_SETCURSEL, 1, 0);
 
-	if (!(this->editWater = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editWater = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 610, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_WATER), nullptr, nullptr)))
-		throw runtime_error("Error, can't create x1 edit button");
+		throw runtime_error("Error, can't create x1 edit button");*/
 
 	if (!CreateWindowEx(0, L"static", L"Water",
 		WS_CHILD | WS_VISIBLE,
@@ -209,11 +202,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editSup = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editSup = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 580, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_SUP), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	/****/
 
@@ -232,11 +225,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editStep = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editStep = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 550, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_STEP), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	//******
 
@@ -255,11 +248,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editFuel = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editFuel = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 520, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_FUEL), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	//*****
 	if (!(this->cbHeat = CreateWindowEx(0, L"combobox", L"",
@@ -277,11 +270,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editHeat = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editHeat = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 490, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_HEAT), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	/*OIL*/
 
@@ -300,11 +293,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editOil = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editOil = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 460, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_OIL), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	//*DE-ICING
 
@@ -323,11 +316,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editDeIce = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editDeIce = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 430, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_DEICE), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	//**LOADER
 
@@ -346,11 +339,11 @@ void App::create_controls()
 		this->hwnd, nullptr, nullptr, nullptr))
 		throw runtime_error("Error, can't create button");
 
-	if (!(this->editLoader = CreateWindowEx(0, L"Edit", L"",
+	/*if (!(this->editLoader = CreateWindowEx(0, L"Edit", L"",
 		WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
 		this->AppWeigh - 150, this->AppHeigth - 400, 70, 25,
 		this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LOADER), nullptr, nullptr)))
-		throw runtime_error("Error, can't create edit button");
+		throw runtime_error("Error, can't create edit button");*/
 
 	//******
 	if (!CreateWindowEx(0, L"static", L"Flight ¹",
@@ -455,278 +448,475 @@ LRESULT App::win_proc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		{
 			switch (static_cast<App::BUT_ID>(LOWORD(wParam)))
 			{
-				case App::BUT_ID::SEND:
+			case App::BUT_ID::SEND:
 
+			{
+
+				std::fstream file("svo.txt", std::ios::out);
+				std::wstring text{};
+				int x = 0;
+				text.resize(MAX_PATH);
+
+				int i = SendMessage(cbLadder, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+
+				if (i == 1)
 				{
-					FILE* fptr = fopen("svo.txt", "w+");
-					std::wstring text{};
-					int x = 0;
-					text.resize(MAX_PATH);
-					GetWindowText(this->editLadder, &text[0], MAX_PATH);
-					
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-						//MessageBox(this->hwnd, L"Enter coordinate X1!", L"Information", MB_OK | MB_ICONINFORMATION);
-						
-						fprintf(fptr, "%d\n", x);
-						
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text),end(text) );
-
-					/******/
-
-					
-					
-					text.resize(MAX_PATH);
-					GetWindowText(this->editBus, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{	
-						fprintf(fptr, "%d\n", x);
-												
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-
-					//***
-					
-					text.resize(MAX_PATH);
-					GetWindowText(this->editLaunch, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-						//MessageBox(this->hwnd, L"Enter coordinate X1!", L"Information", MB_OK | MB_ICONINFORMATION);
-						
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//******
-					
-					text.resize(MAX_PATH);
-					GetWindowText(this->editWater, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//****
-					text.resize(MAX_PATH);
-					GetWindowText(this->editSup, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-					
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					
-					
-					//***
-					text.resize(MAX_PATH);
-					GetWindowText(this->editStep, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//****
-					text.resize(MAX_PATH);
-					GetWindowText(this->editFuel, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//****
-					text.resize(MAX_PATH);
-					GetWindowText(this->editHeat, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//******
-					text.resize(MAX_PATH);
-					GetWindowText(this->editOil , &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//*****
-					text.resize(MAX_PATH);
-					GetWindowText(this->editDeIce, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					//*****
-					text.resize(MAX_PATH);
-					GetWindowText(this->editLoader, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						fprintf(fptr, "%d\n", x);
-
-					}
-					else {
-						x = std::stoi(text);
-
-						fprintf(fptr, "%d\n", x);
-					}
-					text.erase(begin(text), end(text));
-					fclose(fptr);
-
-					//***
-					text.resize(MAX_PATH);
-					GetWindowText(this->boadNum, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						MessageBox(this->hwnd, L"Fill flight #!", L"Information", MB_OK | MB_ICONINFORMATION);
-						break;
-
-					}
-					else 
-					{
-						//x = std::stoi(text);
-						std::wofstream f("svo1.txt", std::wios::in);
-						f << text << std::endl;
-						f.close();
-					}
-					text.erase(begin(text), end(text));
-
-					text.resize(MAX_PATH);
-					GetWindowText(this->aircraft, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						MessageBox(this->hwnd, L"Fill aircraft type #!", L"Information", MB_OK | MB_ICONINFORMATION);
-						break;
-
-					}
-					else
-					{
-						//x = std::stoi(text);
-						std::wofstream f("svo1.txt", std::wios::app);
-						f << text << std::endl;
-						f.close();
-					}
-					text.erase(begin(text), end(text));
-
-
-					text.resize(MAX_PATH);
-					GetWindowText(this->place, &text[0], MAX_PATH);
-					text.erase(remove(begin(text), end(text), 0), end(text));
-					x = 0;
-					if (text.empty())
-					{
-
-						MessageBox(this->hwnd, L"Fill place of an aircraft!", L"Information", MB_OK | MB_ICONINFORMATION);
-						break;
-
-					}
-					else
-					{
-						//x = std::stoi(text);
-						std::wofstream f("svo1.txt", std::wios::app);
-						f << text << std::endl;
-						f.close();
-					}
-					text.erase(begin(text), end(text));
-					
-
+					file << x << std::endl;
 
 				}
-				break;
+				else {
+
+					GetWindowText(this->editLadder, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+
+				/******/
+
+
+				text.resize(MAX_PATH);
+				i = SendMessage(cbBus, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editBus, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+
+				//***
+
+				text.resize(MAX_PATH);
+				i = SendMessage(cbLaunch, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editLaunch, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//******
+
+				text.resize(MAX_PATH);
+				i = SendMessage(cbSup, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editSup, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//****
+				text.resize(MAX_PATH);
+				i = SendMessage(cbWater, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editWater, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+
+
+				//***
+				text.resize(MAX_PATH);
+				i = SendMessage(cbStep, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editStep, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//****
+				text.resize(MAX_PATH);
+				i = SendMessage(cbFuel, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editFuel, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//****
+				text.resize(MAX_PATH);
+				i = SendMessage(cbHeat, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editHeat, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//******
+				text.resize(MAX_PATH);
+				i = SendMessage(cbOil, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editOil, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//*****
+				text.resize(MAX_PATH);
+				i = SendMessage(cbDeIce, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editDeIce, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				//*****
+				text.resize(MAX_PATH);
+				i = SendMessage(cbLoader, CB_GETCURSEL, 0, 0);
+
+				x = 0;
+				if (i == 1)
+				{
+					file << x << std::endl;
+
+				}
+				else {
+					GetWindowText(this->editLoader, &text[0], MAX_PATH);
+					text.erase(remove(begin(text), end(text), 0), end(text));
+					x = std::stoi(text);
+
+					file << x << std::endl;
+				}
+				text.erase(begin(text), end(text));
+				file.close();
+
+				//***
+				text.resize(MAX_PATH);
+				GetWindowText(this->boadNum, &text[0], MAX_PATH);
+				text.erase(remove(begin(text), end(text), 0), end(text));
+				x = 0;
+				if (text.empty())
+				{
+
+					MessageBox(this->hwnd, L"Fill flight #!", L"Information", MB_OK | MB_ICONINFORMATION);
+					break;
+
+				}
+				else
+				{
+
+					std::wofstream f("svo1.txt", std::wios::out);
+					f << text << std::endl;
+					f.close();
+				}
+				text.erase(begin(text), end(text));
+
+				text.resize(MAX_PATH);
+				GetWindowText(this->aircraft, &text[0], MAX_PATH);
+				text.erase(remove(begin(text), end(text), 0), end(text));
+				x = 0;
+				if (text.empty())
+				{
+
+					MessageBox(this->hwnd, L"Fill aircraft type #!", L"Information", MB_OK | MB_ICONINFORMATION);
+					break;
+
+				}
+				else
+				{
+
+					std::wofstream f("svo1.txt", std::wios::app);
+					f << text << std::endl;
+					f.close();
+				}
+				text.erase(begin(text), end(text));
+
+
+				text.resize(MAX_PATH);
+				GetWindowText(this->place, &text[0], MAX_PATH);
+				text.erase(remove(begin(text), end(text), 0), end(text));
+				x = 0;
+				if (text.empty())
+				{
+
+					MessageBox(this->hwnd, L"Fill place of an aircraft!", L"Information", MB_OK | MB_ICONINFORMATION);
+					break;
+
+				}
+				else
+				{
+
+					std::wofstream f("svo1.txt", std::wios::app);
+					f << text << std::endl;
+					f.close();
+				}
+				text.erase(begin(text), end(text));
+				MessageBox(this->hwnd, L"Await the response from air company", L"Information", MB_OK | MB_ICONINFORMATION);
 			}
+			break;
+			case App::BUT_ID::CB_BUS:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbBus, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editBus = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 670, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_BUS), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_DEICE:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbDeIce, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editDeIce = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 430, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_DEICE), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_FUEL:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbFuel, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editFuel = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 520, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_FUEL), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_HEAT:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbHeat, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editHeat = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 490, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_HEAT), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_LADDER:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbLadder, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editLadder = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 700, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LADDER), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_LAUNCH:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbLaunch, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editLaunch = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 640, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LAUNCH), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_LOADER:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbLoader, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editLoader = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 400, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_LOADER), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_OIL:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbOil, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editOil = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 460, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_OIL), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_STEP:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbStep, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editStep = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 550, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_STEP), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_SUP:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbSup, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editSup = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 580, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_SUP), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CB_WATER:
+			{
+				if (HIWORD(wParam) == CBN_SELENDOK) {
+					int i = SendMessage(cbWater, CB_GETCURSEL, 0, 0);
+					if (i == 0) {
+						if (!(this->editWater = CreateWindowEx(0, L"Edit", L"",
+							WS_CHILD | WS_BORDER | WS_VISIBLE | ES_NUMBER | ES_LEFT,
+							this->AppWeigh - 150, this->AppHeigth - 610, 70, 25,
+							this->hwnd, reinterpret_cast<HMENU>(App::BUT_ID::EDIT_WATER), nullptr, nullptr)))
+							throw "Error, can't create edit button";
+					}
+				}
+				UpdateWindow(hwnd);
+			}
+			break;
+
+			case App::BUT_ID::CANCEL:
+			{
+				PostQuitMessage(0);
+			}
+			break;
+
+
+			}
+
+
+				
+						
 		}
 		return 0;
 
